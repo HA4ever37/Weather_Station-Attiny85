@@ -28,4 +28,4 @@ Needed hardware:
 
 
 ![alt text](https://github.com/HA4ever37/Weahter_Station-Attiny85/blob/master/HDT11_attiny85_bb.png?raw=true)
-![alt text](https://github.com/HA4ever37/Weather_Station-Attiny85/blob/master/Weather-Station-Attiny85.jpg?raw=true)
+//![alt text](https://github.com/HA4ever37/Weather_Station-Attiny85/blob/master/Weather-Station-Attiny85.jpg?raw=true)
