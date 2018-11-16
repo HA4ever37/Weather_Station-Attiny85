@@ -1,5 +1,5 @@
 # Weather Station - Attiny85
-Simple weather Station using Attiny85 + DHt11 +  I2C LCD 16X2
+Simple weather Station using Attiny85 + DHT11 +  I2C LCD 16X2
 
 Features:
 * print temperature and humidity on screen
@@ -23,9 +23,9 @@ Needed hardware:
 * Push button
 * Solderless breadboard
 * Jump wires
-* A way to upload the sketch to attiny85 (I use arduino uno board)
+* A way to upload the sketch to the attiny85 (I use arduino uno board)
 * (Optional) capacitor between VCC and GND
 
 
-![alt text](https://github.com/HA4ever37/Weahter-Station---Attiny85/blob/master/HDT11_attiny85_bb.png?raw=true)
-![alt text](https://github.com/HA4ever37/Weather-Station---Attiny85/blob/master/Weather-Station-Attiny85.jpg?raw=true)
+![alt text](https://github.com/HA4ever37/Weahter_Station-Attiny85/blob/master/HDT11_attiny85_bb.png?raw=true)
+![alt text](https://github.com/HA4ever37/Weather_Station-Attiny85/blob/master/Weather-Station-Attiny85.jpg?raw=true)
