@@ -10,7 +10,7 @@ Features:
 * Timer for the number of readings before the microcontroller goes to sleep (10 readings by default)
 * Print error code on the screen when cannot read from DHt11
 
-Two external libraries are required: "LiquidCrystal_I2C" and "SimpleDHT"
+Two external libraries are needed: "LiquidCrystal_I2C" and "SimpleDHT"
 
 Needed hardware:
 * Attiny85
@@ -23,7 +23,9 @@ Needed hardware:
 * Push button
 * Solderless breadboard
 * Jump wires
+* A way to upload the sketch to attiny85 (I use arduino uno board)
 * (Optional) capacitor between VCC and GND
 
 
 ![alt text](https://github.com/HA4ever37/Weahter-Station---Attiny85/blob/master/HDT11_attiny85_bb.png?raw=true)
+![alt text](https://github.com/HA4ever37/Weather-Station---Attiny85/blob/master/Weather-Station-Attiny85.jpg?raw=true)
