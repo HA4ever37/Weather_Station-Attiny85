@@ -6,7 +6,7 @@ Features:
 * Buzzer notification per reading
 * Automatic backlight using photoresistor
 * Low power consumption, less than 1mA during deep sleep
-* Push button to wakeup (actually reset) the mirocontroller and read data from DHT11
+* Push button to wake up (actually reset) the microcontroller and read data from DHT11
 * Timer for the number of readings before the microcontroller goes to sleep (10 readings by default)
 * Print error code on the screen when cannot read from DHt11
 
