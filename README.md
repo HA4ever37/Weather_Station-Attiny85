@@ -10,7 +10,9 @@ Features:
 * Timer for the number of readings before the microcontroller goes to sleep (10 readings by default)
 * Print error code on the screen when cannot read from DHt11
 
+
 Two external libraries are needed: "LiquidCrystal_I2C" and "SimpleDHT"
+
 
 Needed hardware:
 * Attiny85
@@ -19,7 +21,7 @@ Needed hardware:
 * Piezo buzzer
 * 2 np2222a transistors
 * 10K ohm resistor
-* photo photoresistor
+* Photo photoresistor (LDR)
 * Push button
 * Solderless breadboard
 * Jump wires
