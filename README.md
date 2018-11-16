@@ -2,7 +2,7 @@
 Simple weather Station using Attiny85 + DHT11 +  I2C LCD 16X2
 
 Features:
-* print temperature and humidity on screen
+* Print temperature and humidity on screen
 * Buzzer notification per reading
 * Automatic backlight using photoresistor
 * Low power consumption, less than 1mA during deep sleep
