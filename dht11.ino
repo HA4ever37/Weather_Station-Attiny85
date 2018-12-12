@@ -14,6 +14,7 @@ SimpleDHT11 dht11;
 void setup()
 {
   set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+  pinMode(pinDHT11, INPUT);
   pinMode(buzzer, OUTPUT);
   pinMode(LcdPwr, OUTPUT);
   digitalWrite(LcdPwr, HIGH);
@@ -24,14 +25,14 @@ void setup()
   lcd.print(F("Weather Station"));
   lcd.setCursor(0, 1);
   lcd.print(F("By: HA4ever ^_*"));
-  delay(2000);
+  delay(1500);
 }
 
 void loop()
 {
   byte temperature = 0, humidity = 0;
   int err = SimpleDHTErrSuccess;
-  for (byte i = 0; i < 10; i++) {
+  for (byte i = 0; i < 6; i++) {
     if ((err = dht11.read(pinDHT11, &temperature, &humidity, NULL)) != SimpleDHTErrSuccess) {
       lcd.clear();
       lcd.setCursor(0, 0);
@@ -52,7 +53,7 @@ void loop()
     lcd.print(F("Humidity: "));
     lcd.print((int)humidity);
     lcd.print(F("%"));
-    delay(1000);
+    delay(1250);
   }
   enterSleep();
 }
