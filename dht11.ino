@@ -14,7 +14,7 @@ SimpleDHT11 dht11;
 void setup()
 {
   set_sleep_mode(SLEEP_MODE_PWR_DOWN);
-  pinMode(pinDHT11, INPUT);
+  pinMode(pinDHT11, INPUT_PULLUP);
   pinMode(buzzer, OUTPUT);
   pinMode(LcdPwr, OUTPUT);
   digitalWrite(LcdPwr, HIGH);
