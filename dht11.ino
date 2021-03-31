@@ -4,8 +4,7 @@
 #include <avr/power.h>
 
 #define buzzer 1
-#define LcdPwr 3
-#define pinDHT11 4
+#define pinDHT11 3
 
 LiquidCrystal_I2C lcd(0x3F, 16, 2);  // set the LCD address to 0x3F for a 16 chars and 2 line display (Green)
 //LiquidCrystal_I2C lcd(0x27, 16, 2);  // set the LCD address to 0x27 for a 16 chars and 2 line display (Blue)
@@ -14,10 +13,7 @@ SimpleDHT11 dht11;
 void setup()
 {
   set_sleep_mode(SLEEP_MODE_PWR_DOWN);
-  pinMode(pinDHT11, INPUT_PULLUP);
   pinMode(buzzer, OUTPUT);
-  pinMode(LcdPwr, OUTPUT);
-  digitalWrite(LcdPwr, HIGH);
   lcd.init();
   lcd.display();
   lcd.backlight();
@@ -25,14 +21,14 @@ void setup()
   lcd.print(F("Weather Station"));
   lcd.setCursor(0, 1);
   lcd.print(F("By: HA4ever ^_*"));
-  delay(1500);
+  delay(2000);
 }
 
 void loop()
 {
   byte temperature = 0, humidity = 0;
   int err = SimpleDHTErrSuccess;
-  for (byte i = 0; i < 6; i++) {
+  for (byte i = 0; i < 10; i++) {
     if ((err = dht11.read(pinDHT11, &temperature, &humidity, NULL)) != SimpleDHTErrSuccess) {
       lcd.clear();
       lcd.setCursor(0, 0);
@@ -43,7 +39,7 @@ void loop()
       delay(1000);
       return;
     }
-    tone(buzzer, 500, 25);
+    tone(buzzer, 500, 50);
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print(F("Temp: "));
@@ -53,18 +49,17 @@ void loop()
     lcd.print(F("Humidity: "));
     lcd.print((int)humidity);
     lcd.print(F("%"));
-    delay(1250);
+    delay(1000);
   }
   enterSleep();
 }
 
 void enterSleep(void)
 {
-  tone(buzzer, 300, 25);
+  tone(buzzer, 300, 50);
   lcd.noBacklight();
   lcd.noDisplay();
   delay(50);
-  digitalWrite(LcdPwr, LOW);
   power_usi_disable();
   power_timer1_disable();
   power_adc_disable();
